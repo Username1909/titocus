@@ -7,9 +7,17 @@ title: Welcome to my blog
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="Free Pomodoro timer for macOS.">
+  <meta name="keywords" content="Titocus, Pomodoro, timer">
+  <meta name="author" content="Kristína Koparanovová">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Titocus</title>
-  <link rel="stylesheet" href="style/styles.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <script src="scripts/index.js" type="text/javascript" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
 </head>
 
 <body>
@@ -18,7 +26,7 @@ title: Welcome to my blog
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <img src="logo-placeholder.png" alt="Titocus Logo" height="32">
+        <a href="#hero"><img src="images/logo-1024x1024.png" alt="Titocus Logo"></a>
       </div>
 
       <!-- Desktop nav -->
@@ -105,7 +113,7 @@ title: Welcome to my blog
         <input type="text" id="name" name="name" required />
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required/>
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
@@ -121,61 +129,6 @@ title: Welcome to my blog
       <p>&copy; 2025 Titocus. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- JavaScript -->
-  <script>
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    const dropdown = document.getElementById('dropdown');
-    const dropdownToggle = document.getElementById('dropdownToggle');
-    const dropdownIcon = document.getElementById('dropdownIcon');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-    const submenuLinks = document.querySelectorAll('#dropdownMenu a');
-
-    // Scroll effect navbar
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 10);
-    });
-
-    // Toggle dropdown submenu
-    dropdownToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isShown = dropdown.classList.toggle('show');
-      dropdownIcon.innerHTML = isShown ? '&#x25B4;' : '&#x25BE;';
-    });
-
-    // Open toggle mobile nav panel
-    hamburger.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-    });
-
-    // Close toggle mobile nav panel when clicking links
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-      });
-    });
-
-    submenuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-      });
-    });
-
-    // Close toggle mobile nav panel when clicking outside
-    document.addEventListener('click', (e) => {
-      if (
-        mobileNav.classList.contains('open') &&
-        !mobileNav.contains(e.target) &&
-        !hamburger.contains(e.target)
-      ) {
-        mobileNav.classList.remove('open');
-        dropdown.classList.remove('show');
-        dropdownIcon.innerHTML = '&#x25BE;';
-      }
-    });
-  </script>
 
 </body>
 
