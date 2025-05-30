@@ -1,1 +1,603 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(211, 108, 21), rgb(211, 108, 21), rgb(255, 255, 255));
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(7px);
+}
+
+.navbar-container {
+  padding: 0.5em 1.5625em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 3em;
+  height: auto;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-mobile {
+  display: block;
+}
+
+/* Desktop navbar */
+@media (min-width: 768px) {
+  .navbar-container {
+    padding: 1em 2em;
+  }
+
+  .menu {
+    display: inline-block;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+
+  .logo {
+    width: 4em;
+  }
+}
+
+.nav-link {
+  margin-left: 2em;
+  text-decoration: none;
+}
+
+/* Mobile navbar */
+details>summary {
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 1em;
+  margin-top: 1.5em;
+  padding: 0.8125em 1.875em;
+}
+
+.dropdown-link {
+  display: block;
+  margin-block: 1em;
+  text-decoration: none;
+}
+
+.nav-link,
+.dropdown a {
+  color: rgb(255, 255, 255);
+  transition-duration: 0s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: color;
+}
+
+.nav-link:hover,
+.dropdown a:hover {
+  color: rgb(211, 108, 21);
+}
+
+/* Sections */
+.section {
+  padding: 7em 1.5em;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 7em 8%;
+  }
+}
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding-block: 0;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+}
+
+.hero-left {
+  background-image: url(/Mackbook-Air-min.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-size: 3em;
+  margin-bottom: 0.52em;
+}
+
+.hero-subtitle {
+  font-size: 1.50em;
+  margin-block: 0.83em;
+}
+
+.hero-text {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.body-button {
+  padding-top: 1.6em;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+  }
+
+  .hero-overlay {
+    padding-left: 1.5em;
+    padding-right: 8%;
+  }
+
+  .hero-right {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text {
+    line-height: 1.9;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-left {
+    min-height: 33vh;
+    margin-top: 8vh;
+  }
+
+  .hero-overlay {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  .hero-right {
+    margin-bottom: 8vh;
+  }
+}
+
+/* About section */
+.section.about {
+  background: url(/glassesshop-yunYrGrhXpY-unsplash-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  text-align: left;
+}
+
+.about-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 1.5em;
+  width: 100%;
+}
+
+.about-container .section-title {
+  font-size: 2em;
+  margin-bottom: 0.67em;
+}
+
+.about-container .section-text {
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-top: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .section.about {
+    padding-bottom: 2.5em;
+    min-height: 80vh;
+  }
+
+  .about-container .section-text {
+    line-height: 1.6;
+  }
+}
+
+/* Preview section */
+.section.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.preview-split {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.screenshot-img {
+  max-width: 75%;
+  height: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section.preview .section-title {
+  font-size: 2em;
+  margin-bottom: 0.67em;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section.preview {
+    align-items: center;
+    padding-top: 14em;
+  }
+
+  .preview-split {
+    flex-direction: row;
+    gap: 7em;
+  }
+
+  .screenshot-img {
+    max-width: 100%;
+  }
+}
+
+/* Feature section */
+.features-grid {
+  max-width: 80em;
+  margin: 0 auto;
+  display: grid;
+  gap: 3em;
+}
+
+.feature-item {
+  border: 3px solid rgb(255, 255, 255);
+  padding: 2rem 1.5em;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(211, 108, 21, 0.1);
+  text-align: left;
+}
+
+.feature-icon {
+  margin: 0 auto 1em;
+  width: 5em;
+  height: auto;
+}
+
+.section.features .section-title {
+  font-size: 2em;
+  margin-bottom: 0.67em;
+  text-align: left;
+}
+
+.feature-title {
+  font-size: 1.50em;
+  margin-block: 0.83em;
+}
+
+.feature-text {
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-top: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .section.features {
+    padding-block: 14em;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-item {
+    padding: 3rem;
+  }
+
+  .section.features .section-title {
+    text-align: center;
+  }
+
+  .feature-text {
+    line-height: 1.6;
+  }
+
+}
+
+/* Download section */
+.section.download {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+}
+
+.left-overlay {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.download-left,
+.download-right {
+  flex: 1;
+}
+
+.download-right {
+  background-image: url(/good-faces-DSj40n6beGk-unsplash-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 20em);
+}
+
+.download-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.apple-minimal {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.apple-icon {
+  width: 1.5em;
+  height: auto;
+  filter: invert(1);
+}
+
+.apple-label {
+  font-size: 0.95em;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.section.download .section-title {
+  font-size: 2em;
+  margin-block: 0.67em;
+}
+
+.download-btn {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .section.download {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0;
+  }
+
+  .left-overlay {
+    padding-right: 8%;
+  }
+
+  .download-left {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .download-right {
+    min-height: calc(100vh - 14em);
+  }
+
+  .section.download .section-title {
+    margin-top: 0;
+  }
+}
+
+/* Form */
+.contact-container {
+  max-width: 25em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.8125em 1.875em;
+  border-radius: 20px;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(178, 178, 178);
+  font-size: 1em;
+  font-style: italic;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+}
+
+.section.contact .section-title {
+  font-size: 2em;
+  margin-bottom: 0.67em;
+  text-align: left;
+}
+
+.section.contact .section-text {
+  font-size: 1.17em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section.contact {
+    padding-block: 14em;
+  }
+
+  .contact-container {
+    max-width: 30em;
+  }
+
+  .section.contact .section-title {
+    text-align: center;
+  }
+
+  .section.contact .section-text {
+    text-align: center;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 3.5em 0;
+  text-align: center;
+  background-color: rgb(211, 108, 21);
+  font-size: 1em;
+}
+
+/* Buttons */
+button,
+.download-btn {
+  background-color: rgb(211, 108, 21);
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  padding: 0.8125em 1.875em;
+  border-radius: 60px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav .download-btn {
+  margin-left: 2em;
+  padding: 0.6875em 1.875em;
+}
+
+.buttonSubmit {
+  margin-bottom: -1em;
+}
+
+@media (min-width: 768px) {
+
+  button,
+  .download-btn {
+    transition: transform 0.2s ease;
+  }
+
+  button:hover,
+  .download-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .buttonSubmit {
+    margin-top: 0.5em;
+  }
+}
+
+@media (max-width: 767px) {
+
+  button,
+  .download-btn {
+    transition: box-shadow 0.2s ease;
+  }
+
+  button:hover,
+  .download-btn:hover {
+    box-shadow: 0 0 0 2px rgb(255, 255, 255);
+  }
+
+  .buttonSubmit {
+    text-align: left;
+  }
+}
+
+/* Messages */
+.download-message,
+.thanks-messag {
+  font-size: 1.17em;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.download-message.visible,
+.thanks-message.visible {
+  margin-top: 1.00em;
+}
+
+.thanks-message.visible {
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .thanks-message.visible {
+    text-align: center;
+  }
+}
