@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Pomodoro timer for macOS.">
+  <meta name="keywords" content="Titocus, Pomodoro, timer">
+  <title>Titocus</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="scripts/index.js" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
+
+<body>
+  <!-- Navigation Menu -->
+  <nav id="navbar">
+    <div class="navbar-container">
+      <a href="#"><img src="images/android-chrome-512x512.png" alt="Titocus logo" class="logo"></a>
+      <div class="menu">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#contact" class="nav-link">Feedback</a>
+        <a href="#download" class="download-btn">Get Titocus Now</a>
+      </div>
+      <div class="menu-mobile">
+        <details class="details">
+          <summary class="summary">☰</summary>
+          <div class="dropdown">
+            <a href="#" class="dropdown-link">Home</a>
+            <a href="#features" class="dropdown-link">Features</a>
+            <a href="#contact" class="dropdown-link">Feedback</a>
+            <a href="#download" class="dropdown-link">Get Titocus Now</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-left"></div>
+    <div class="hero-right">
+      <div class="hero-overlay">
+        <h1 class="hero-title">Don't lose your focus.</h1>
+        <h2 class="hero-subtitle">Use Titocus to stay productive.</h2>
+        <p class="hero-text">
+          Titocus gives you control over your time, helping you stay focused and maintain peak performance.</p>
+        <div class="body-button">
+          <a href="#about" class="download-btn">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="about-container">
+      <h2 class="section-title">More than just work or study.</h2>
+      <p class="section-text">
+        Titocus is a minimalist and distraction-free Pomodoro timer designed for macOS users. Whether you need to
+        focus
+        for work or study, or simply want to enjoy your hobby without interruptions, Titocus helps you structure your
+        time effectively.
+      </p>
+      <p class="section-text">
+        Use it individually or as a team — during meetings, group projects, or shared productivity sessions. It’s
+        ideal
+        for focused work, deep study, creative hobbies, or even quiet moments like reading a book or relaxing with a
+        cup
+        of tea.
+      </p>
+    </div>
+  </section>
+
+  <!-- Screenshot Section -->
+  <section class="section preview">
+    <h2 class="section-title">Just one click to start your next focus session.</h2>
+    <div class="preview-split">
+      <div class="preview-img">
+        <img src="images/Screenshot_1.png" alt="Titocus App Screenshot" class="screenshot-img">
+      </div>
+      <div class="preview-img">
+        <img src="images/Screenshot_2.png" alt="Titocus App Screenshot" class="screenshot-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section features">
+    <h2 class="section-title">Minimal by design. Powerful by function.</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <img src="images/user-experience_white-min.png" alt="Minimal UI" class="feature-icon">
+        <h3 class="feature-title">Minimal Interface</h3>
+        <p class="feature-text">Stay focused with a clean, distraction-free user experience.</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/equalizer_white-min.png" alt="Custom Time" class="feature-icon">
+        <h3 class="feature-title">Customizable Timers</h3>
+        <p class="feature-text">Adjust work and break intervals to suit your workflow.</p>
+      </div>
+      <div class="feature-item">
+        <img src="images/bell_white-min.png" alt="Notifications" class="feature-icon">
+        <h3 class="feature-title">Smart Notifications</h3>
+        <p class="feature-text">Gentle alerts to keep you on schedule without interrupting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download section -->
+  <section id="download" class="section download">
+    <div class="download-left">
+      <div class="left-overlay">
+        <h2 class="section-title">Ready to begin?<br>Transform the way you work today.</h2>
+        <div class="apple-minimal">
+          <img src="images/apple-logo-svgrepo-com.svg" alt="Apple logo" class="apple-icon">
+          <span class="apple-label">macOS 15.4+</span>
+        </div>
+        <a href="/app/Titocus.zip" download class="download-btn" id="downloadLink">Download Titocus</a>
+        <h3 id="downloadThanks" class="download-message hidden">Thanks for downloading Titocus! Stay focused and enjoy
+          your time.</h3>
+      </div>
+    </div>
+    <div class="download-right"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title">Help Us Improve</h2>
+    <h3 class="section-text">Got a suggestion or found a bug? Let us know.</h3>
+    <div class="contact-container">
+
+      <form id="feedbackForm" action="https://formspree.io/f/xrbqnpaz" method="POST" class="form">
+        <input type="email" name="email" placeholder="Email" required class="form-input">
+        <textarea name="message" rows="5" placeholder="Your Message" required class="form-textarea"></textarea>
+        <div class="buttonSubmit">
+          <button id="submitButton" type="submit">Submit</button>
+        </div>
+        <h3 id="formThanks" class="thanks-message hidden">Thanks for your feedback!</h3>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Copyright &copy; 2025 Titocus. All rights reserved.
+  </footer>
+</body>
+
+</html>
