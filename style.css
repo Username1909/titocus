@@ -132,7 +132,7 @@ details>summary {
 }
 
 .hero-left {
-  background-image: url(/Mackbook-Air-min.png);
+  background-image: url(images/Mackbook-Air-min.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -200,7 +200,7 @@ details>summary {
 
 /* About section */
 .section.about {
-  background: url(/glassesshop-yunYrGrhXpY-unsplash-min.jpg);
+  background: url(images/glassesshop-yunYrGrhXpY-unsplash-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -369,7 +369,7 @@ details>summary {
 }
 
 .download-right {
-  background-image: url(/good-faces-DSj40n6beGk-unsplash-min.jpg);
+  background-image: url(images/good-faces-DSj40n6beGk-unsplash-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
