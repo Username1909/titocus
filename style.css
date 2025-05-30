@@ -46,7 +46,7 @@ nav {
 }
 
 /* Desktop navbar */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar-container {
     padding: 1em 2em;
   }
@@ -113,7 +113,7 @@ details>summary {
   padding: 7em 1.5em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section {
     padding: 7em 8%;
   }
@@ -162,7 +162,7 @@ details>summary {
   padding-top: 1.6em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hero-section {
     flex-direction: row;
   }
@@ -182,7 +182,7 @@ details>summary {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .hero-left {
     min-height: 33vh;
     margin-top: 8vh;
@@ -230,7 +230,7 @@ details>summary {
   margin-top: 0.5em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .about-container {
     padding-left: 8%;
     padding-right: 8%;
@@ -273,7 +273,7 @@ details>summary {
   text-align: left;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section.preview {
     align-items: center;
     padding-top: 14em;
@@ -328,7 +328,7 @@ details>summary {
   margin-top: 0.5em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section.features {
     padding-block: 14em;
   }
@@ -410,7 +410,7 @@ details>summary {
   display: inline-block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section.download {
     flex-direction: row-reverse;
     align-items: center;
@@ -485,7 +485,7 @@ details>summary {
   text-align: left;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section.contact {
     padding-block: 14em;
   }
@@ -533,7 +533,7 @@ nav .download-btn {
   margin-bottom: -1em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
   button,
   .download-btn {
@@ -550,7 +550,7 @@ nav .download-btn {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
 
   button,
   .download-btn {
@@ -596,7 +596,7 @@ nav .download-btn {
   text-align: left;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .thanks-message.visible {
     text-align: center;
   }
